@@ -14,16 +14,333 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      clubs: {
+        Row: {
+          created_at: string
+          description: string | null
+          description_en: string | null
+          display_order: number
+          gallery_urls: string[] | null
+          id: string
+          logo_url: string | null
+          name: string
+          name_en: string | null
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          description_en?: string | null
+          display_order?: number
+          gallery_urls?: string[] | null
+          id?: string
+          logo_url?: string | null
+          name: string
+          name_en?: string | null
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          description_en?: string | null
+          display_order?: number
+          gallery_urls?: string[] | null
+          id?: string
+          logo_url?: string | null
+          name?: string
+          name_en?: string | null
+        }
+        Relationships: []
+      }
+      event_settings: {
+        Row: {
+          attendance_count: number
+          description: string | null
+          description_en: string | null
+          event_date: string | null
+          event_location: string | null
+          event_name: string
+          event_name_en: string | null
+          id: string
+          logo_url: string | null
+          news_ticker: string | null
+          news_ticker_active: boolean
+          news_ticker_en: string | null
+          program_pdf_url: string | null
+          registration_url: string | null
+          updated_at: string
+          youtube_url: string | null
+        }
+        Insert: {
+          attendance_count?: number
+          description?: string | null
+          description_en?: string | null
+          event_date?: string | null
+          event_location?: string | null
+          event_name?: string
+          event_name_en?: string | null
+          id?: string
+          logo_url?: string | null
+          news_ticker?: string | null
+          news_ticker_active?: boolean
+          news_ticker_en?: string | null
+          program_pdf_url?: string | null
+          registration_url?: string | null
+          updated_at?: string
+          youtube_url?: string | null
+        }
+        Update: {
+          attendance_count?: number
+          description?: string | null
+          description_en?: string | null
+          event_date?: string | null
+          event_location?: string | null
+          event_name?: string
+          event_name_en?: string | null
+          id?: string
+          logo_url?: string | null
+          news_ticker?: string | null
+          news_ticker_active?: boolean
+          news_ticker_en?: string | null
+          program_pdf_url?: string | null
+          registration_url?: string | null
+          updated_at?: string
+          youtube_url?: string | null
+        }
+        Relationships: []
+      }
+      organizers: {
+        Row: {
+          created_at: string
+          display_order: number
+          facebook_url: string | null
+          id: string
+          linkedin_url: string | null
+          name: string
+          photo_url: string | null
+          role: string | null
+          role_en: string | null
+        }
+        Insert: {
+          created_at?: string
+          display_order?: number
+          facebook_url?: string | null
+          id?: string
+          linkedin_url?: string | null
+          name: string
+          photo_url?: string | null
+          role?: string | null
+          role_en?: string | null
+        }
+        Update: {
+          created_at?: string
+          display_order?: number
+          facebook_url?: string | null
+          id?: string
+          linkedin_url?: string | null
+          name?: string
+          photo_url?: string | null
+          role?: string | null
+          role_en?: string | null
+        }
+        Relationships: []
+      }
+      partners: {
+        Row: {
+          category: string
+          created_at: string
+          display_order: number
+          id: string
+          logo_url: string | null
+          name: string
+          website_url: string | null
+        }
+        Insert: {
+          category?: string
+          created_at?: string
+          display_order?: number
+          id?: string
+          logo_url?: string | null
+          name: string
+          website_url?: string | null
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          display_order?: number
+          id?: string
+          logo_url?: string | null
+          name?: string
+          website_url?: string | null
+        }
+        Relationships: []
+      }
+      past_events: {
+        Row: {
+          created_at: string
+          display_order: number
+          event_date: string | null
+          id: string
+          image_url: string | null
+          location: string | null
+          title: string
+          title_en: string | null
+        }
+        Insert: {
+          created_at?: string
+          display_order?: number
+          event_date?: string | null
+          id?: string
+          image_url?: string | null
+          location?: string | null
+          title: string
+          title_en?: string | null
+        }
+        Update: {
+          created_at?: string
+          display_order?: number
+          event_date?: string | null
+          id?: string
+          image_url?: string | null
+          location?: string | null
+          title?: string
+          title_en?: string | null
+        }
+        Relationships: []
+      }
+      portfolio_items: {
+        Row: {
+          category: string | null
+          created_at: string
+          display_order: number
+          id: string
+          image_url: string | null
+          title: string
+          title_en: string | null
+        }
+        Insert: {
+          category?: string | null
+          created_at?: string
+          display_order?: number
+          id?: string
+          image_url?: string | null
+          title: string
+          title_en?: string | null
+        }
+        Update: {
+          category?: string | null
+          created_at?: string
+          display_order?: number
+          id?: string
+          image_url?: string | null
+          title?: string
+          title_en?: string | null
+        }
+        Relationships: []
+      }
+      speakers: {
+        Row: {
+          card_color: string | null
+          created_at: string
+          description: string | null
+          description_en: string | null
+          display_order: number
+          duration_minutes: number | null
+          external_link: string | null
+          gallery_urls: string[] | null
+          id: string
+          is_live: boolean
+          is_supervisor: boolean
+          live_started_at: string | null
+          name: string
+          photo_url: string | null
+          scheduled_time: string | null
+          specialty: string | null
+          specialty_en: string | null
+          talk_title: string | null
+          talk_title_en: string | null
+          updated_at: string
+        }
+        Insert: {
+          card_color?: string | null
+          created_at?: string
+          description?: string | null
+          description_en?: string | null
+          display_order?: number
+          duration_minutes?: number | null
+          external_link?: string | null
+          gallery_urls?: string[] | null
+          id?: string
+          is_live?: boolean
+          is_supervisor?: boolean
+          live_started_at?: string | null
+          name: string
+          photo_url?: string | null
+          scheduled_time?: string | null
+          specialty?: string | null
+          specialty_en?: string | null
+          talk_title?: string | null
+          talk_title_en?: string | null
+          updated_at?: string
+        }
+        Update: {
+          card_color?: string | null
+          created_at?: string
+          description?: string | null
+          description_en?: string | null
+          display_order?: number
+          duration_minutes?: number | null
+          external_link?: string | null
+          gallery_urls?: string[] | null
+          id?: string
+          is_live?: boolean
+          is_supervisor?: boolean
+          live_started_at?: string | null
+          name?: string
+          photo_url?: string | null
+          scheduled_time?: string | null
+          specialty?: string | null
+          specialty_en?: string | null
+          talk_title?: string | null
+          talk_title_en?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "user"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +467,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "user"],
+    },
   },
 } as const
